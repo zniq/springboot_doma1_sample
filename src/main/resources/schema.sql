@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS employees(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(30), monthly_salary INT);
