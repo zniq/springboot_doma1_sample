@@ -35,6 +35,14 @@ ext {
 
 }
 
+// build setting for doma
+processResources.destinationDir = compileJava.destinationDir
+compileJava.dependsOn processResources
+def aptGeneratePath = 'build/apt_generated'
+compileJava.options.compilerArgs = ['-s', aptGeneratePath]
+new File(aptGeneratePath).mkdirs()
+
+
 repositories {
   mavenCentral()
   maven { url "http://repo.maven.apache.org/maven2" }
